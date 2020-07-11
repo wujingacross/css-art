@@ -43,6 +43,7 @@ export default function Layout({ children }) {
         </h3>
       </Link>
       <ul style={{ listStyle: `none`, float: `right` }}>
+        <ListLink to="/unit1/">unit1</ListLink>
         <ListLink to="/unit2/">unit2</ListLink>
         <ListLink to="/unit8/">unit8</ListLink>
       </ul>
