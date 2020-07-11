@@ -1,0 +1,76 @@
+.container {
+  box-sizing: content-box;
+}
+
+.clock {
+  font-size: 5px;
+  position: relative;
+  width: 25em;
+  height: 25em;
+  border-radius: 50%;
+  color: seagreen;
+  border: 2.5em solid;
+  background: radial-gradient(currentColor 10%, transparent 10.5%);
+}
+
+.hand {
+  width: 1em;
+  position: absolute;
+  background-color: currentColor;
+  left: calc((100% - 1em) / 2);
+  transform-origin: bottom;
+}
+
+.hour {
+  height: 8em;
+  top: 4.5em;
+  transform: rotate(305deg);
+}
+
+.minute {
+  height: 10em;
+  top: 2.5em;
+  transform: rotate(60deg);
+}
+
+.lock,
+.unlock {
+  font-size: 3px;
+  width: 24em;
+  height: 18em;
+  color: dodgerblue;
+  background: currentColor;
+  position: relative;
+  margin: 25em 25em 0 25em;
+}
+
+.lock::before,
+.unlock::before {
+  content: "";
+  box-sizing: border-box;
+  position: absolute;
+  width: 20em;
+  height: 18em;
+  top: -15em;
+  left: calc((100% - 20em) / 2);
+  border: 3em solid;
+  border-width: 3em 3em 0 3em;
+  border-radius: 10em 10em 0 0;
+}
+
+.lock::after,
+.unlock::after {
+  content: "";
+  position: absolute;
+  width: 4em;
+  height: 7em;
+  background-color: white;
+  border-radius: 5em;
+  left: 10em;
+  top: 6em;
+}
+
+.unlock::before {
+  transform-origin: 2em;
+  transform: rotateY(180deg); /* 以Y轴为对称轴 */
+}
