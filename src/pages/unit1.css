@@ -1,0 +1,265 @@
+.wrapper {
+  display: flex;
+  position: relative;
+}
+.wrapper .menu {
+  flex: 1 0 150px;
+  /* position: fixed;
+  top: 10em; */
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+}
+.wrapper .content {
+  /* position: relative; */
+  flex: auto;
+  margin-left: 300px;
+}
+.wrapper .menu .pla {
+  flex: 1 0 150px;
+}
+
+.tree {
+  width: 30px;
+  height: 300px;
+  background-color: saddlebrown;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.tree .branch {
+  width: 160px;
+  height: 20px;
+  background-color: peru;
+  border-radius: 10px;
+  display: flex;
+  justify-content: flex-end;
+  transform: rotate(-30deg);
+}
+.tree .branch .leaf {
+  width: 40px;
+  height: 40px;
+  border-radius: 100% 0 100% 0;
+  background-color: green;
+  transform: translateY(-100%);
+}
+.word {
+  display: flex;
+}
+.word div {
+  width: 50px;
+  height: 50px;
+  background-color: lightgreen;
+  border-radius: 50%;
+  color: darkgreen;
+  text-align: center;
+  line-height: 50px;
+  font-size: 35px;
+  font-family: sans-serif;
+  border: 1px dashed;
+  transition: 0.5s 0.4s ease-out;
+}
+.word div:hover {
+  background-color: gold;
+  transform: scale(1.5);
+  transition: 0.5s ease-out;
+}
+
+.magnifier {
+  position: relative;
+  color: dodgerblue;
+  font-size: 10px;
+  height: 18em;
+}
+.magnifier .lens {
+  position: absolute;
+  width: 10em;
+  height: 10em;
+  border: 1em solid;
+  border-radius: 50%;
+}
+.magnifier .handle {
+  position: absolute;
+  width: 2em;
+  height: 10em;
+  background-color: currentColor;
+  border-radius: 0 0 1em 1em;
+  left: 10em;
+  top: 10em;
+  transform-origin: top;
+  transform: rotate(-45deg);
+}
+
+.seasons {
+  width: 20em;
+  height: 20em;
+  font-size: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 0.2em;
+}
+.seasons div {
+  border: 0.1em solid gray;
+  text-align: center;
+  line-height: 6em;
+  font-size: 1.5em;
+  color: black;
+}
+.seasons div:nth-child(3) {
+  order: 4;
+}
+.seasons div:nth-child(1) {
+  border-radius: 100% 0 0 0;
+  background-color: springgreen;
+}
+.seasons div:nth-child(2) {
+  border-radius: 0 100% 0 0;
+  background-color: #ff4500;
+}
+.seasons div:nth-child(3) {
+  border-radius: 0 0 100% 0;
+  background-color: rgb(255, 215, 0);
+}
+.seasons div:nth-child(4) {
+  border-radius: 0 0 0 100%;
+  background-color: hsla(195, 100%, 50%);
+}
+
+.hashtag {
+  width: 10em;
+  height: 10em;
+  position: relative;
+}
+.hashtag div {
+  position: absolute;
+}
+.hashtag div:nth-child(odd) {
+  width: 20%;
+  height: 100%;
+}
+.hashtag div:nth-child(even) {
+  width: 100%;
+  height: 20%;
+}
+.hashtag div:nth-child(1) {
+  left: 10%;
+  background-color: hsl(197, 71%, 73%, 0.8);
+}
+.hashtag div:nth-child(2) {
+  top: 10%;
+  background-color: hsl(300, 47%, 75%, 0.8);
+}
+.hashtag div:nth-child(3) {
+  right: 10%;
+  background-color: hsl(0, 79%, 72%, 0.8);
+}
+.hashtag div:nth-child(4) {
+  bottom: 10%;
+  background-color: hsl(28, 100%, 86%, 0.8);
+}
+
+.man {
+  font-size: 10px;
+  width: 12em;
+  height: 33em;
+  position: relative;
+  color: gray;
+  margin: 5em;
+}
+.man .head {
+  position: absolute;
+  width: 7em;
+  height: 7em;
+  background-color: currentColor;
+  border-radius: 50%;
+  right: 0;
+}
+.man .body {
+  position: absolute;
+  width: 6.2em;
+  height: 14.4em;
+  top: 7em;
+  border-radius: 100% 20% 0 0;
+  background-color: currentColor;
+}
+.man .feet::before,
+.man .feet::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  background-color: currentColor;
+  width: 4em;
+  height: 1.4em;
+  left: -1.6em;
+  border-radius: 1em 80%0.4em 0.4em;
+}
+.man .feet::after {
+  transform: translateX(5.6em) translateY(-0.6em) rotate(4deg);
+}
+
+.word2 {
+  font-family: monospace;
+  font-size: 100px;
+  color: orange;
+  text-transform: uppercase;
+  width: 2em;
+  display: flex;
+  justify-content: space-around;
+}
+.word2 div {
+  position: relative;
+}
+.word2 div::before {
+  content: "";
+  position: absolute;
+  width: 130%;
+  height: 100%;
+  background-color: moccasin;
+  border-radius: 0.1em;
+  z-index: -1;
+  left: -15%;
+  transform: rotate(-25deg);
+}
+
+.container {
+  display: flex;
+}
+.container span {
+  width: 10em;
+  height: 10em;
+  margin: 1em;
+  border-radius: 50%;
+  background: repeating-radial-gradient(currentColor, lightyellow);
+  background-size: 10% 10%;
+}
+.container span:nth-child(1) {
+  color: orange;
+}
+.container span:nth-child(2) {
+  color: hotpink;
+}
+.container span:nth-child(3) {
+  color: limegreen;
+}
+
+.wordi {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 160px;
+  /* outline: 1px dashed black; */
+}
+.wordi div:nth-child(1) {
+  width: 100%;
+  height: 33%;
+  background-color: orange;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.wordi div:nth-child(2) {
+  width: 100%;
+  height: 66%;
+  background-color: gold;
+  border-radius: 10px;
+}
