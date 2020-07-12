@@ -46,6 +46,7 @@ export default function Layout({ children }) {
         <ListLink to="/unit1/">unit1</ListLink>
         <ListLink to="/unit2/">unit2</ListLink>
         <ListLink to="/unit8/">unit8</ListLink>
+        <ListLink to="/unit9/">unit9</ListLink>
       </ul>
       {children}
     </div>

@@ -18,6 +18,18 @@ export default function BeforeAfter() {
           <figure className={styles.lock} />
           <figure className={styles.unlock} />
         </div>
+        <div style={{ display: "flex", marginBottom: "1.08em" }}>
+          <figure className={styles.parrot}>
+            <span className={styles.outer}></span>
+            <span className={styles.middle}></span>
+            <span className={styles.inner}></span>
+          </figure>
+          <figure className={styles.parrot}>
+            <span className={styles.outer}></span>
+            <span className={styles.middle}></span>
+            <span className={styles.inner}></span>
+          </figure>
+        </div>
       </section>
     </Layout>
   )
