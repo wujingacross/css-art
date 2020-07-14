@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
-import styles from "./unit9.css"
+import styles from "./unit9.module.css"
 
 export default function Transition() {
   return (
@@ -12,7 +12,27 @@ export default function Transition() {
       </p>
       <section className={styles.container}>
         <figure>
-          <div className="hov" />
+          <div className={styles.hov} />
+        </figure>
+        <figure>
+          <div className={styles.battery} />
+        </figure>
+        <figure className={styles.test3}>
+          <div></div>
+          <div></div>
+          <div></div>
+        </figure>
+        <figure className={styles.test4}>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
         </figure>
       </section>
     </Layout>

@@ -1,0 +1,151 @@
+.container {
+  box-sizing: content-box;
+}
+
+.hov {
+  width: 10em;
+  height: 10em;
+  background-color: lightgreen;
+  transition-duration: 2s;
+  transition-delay: 1s;
+  transition-property: border-radius; /** 参与缓动的属性 */
+}
+
+.hov:hover {
+  background-color: lightcoral;
+  border-radius: 50%;
+}
+
+.battery {
+  font-size: 30px;
+  width: 6em;
+  height: 3em;
+  color: midnightblue;
+  border: 0.5em solid;
+  position: relative;
+  background-image: linear-gradient(to right, whitesmoke, whitesmoke);
+  background-repeat: no-repeat;
+  background-size: 10% 80%;
+  background-position: 0.3em 0.3em;
+  transition: 5s steps(6);
+}
+
+.battery::after {
+  content: "";
+  position: absolute;
+  width: 0.5em;
+  height: 2em;
+  background-color: currentColor;
+  top: 0.5em;
+  right: -1em;
+  border-radius: 0 0.2em 0.2em 0;
+}
+
+.battery:hover {
+  background-size: 90% 80%;
+}
+
+.test3 {
+  display: flex;
+}
+
+.test3 div {
+  font-size: 10px;
+  width: 10em;
+  height: 10em;
+  background-color: lightgreen;
+  margin: 1em;
+}
+
+.test3 div:hover {
+  border-radius: 50%;
+  background-color: lightcoral;
+}
+
+.test3 div:nth-child(1) {
+  transition: 0.5s; /* 仅在初始状态设置transition属性，那么初始状态到终止状态的动画，终止状态到初始状态的动画，两个动画过程的动画效果一致，即相同的持续时长、时间函数等*/
+}
+
+.test3 div:nth-child(2):hover {
+  transition: 0.5s; /* 仅在终止状态设置transition属性，那么初始状态到终止状态的动画应用了缓动效果， 终止状态到初始状态没有缓动效果*/
+}
+
+/* start */
+/* 在初始状态、终止状态均设置了transition属性，那么每一个状态的缓动效果，会应用到从另一个状态到自己状态时*/
+.test3 div:nth-child(3) {
+  transition: 0.5s;
+}
+.test3 div:nth-child(3):hover {
+  transition: 1s steps(3);
+}
+/* end */
+
+.test4 {
+  font-size: 10px;
+  width: 60em;
+  height: 5em;
+  display: flex;
+  justify-content: space-between;
+  background-color: #eee;
+  padding: 1em;
+  position: relative;
+  margin-bottom: 12em;
+}
+.test4 div {
+  width: 5em;
+  height: 5em;
+  background-color: lightgreen;
+}
+
+.test4::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+  padding: inherit;
+  top: 8em;
+  left: 0;
+}
+
+.test4:hover div {
+  transform: translateY(8em) scale(0.6);
+  background-color: lightcoral;
+  border-radius: 50%;
+}
+
+.test4 div {
+  transition: 0.5s;
+  transition-delay: calc((var(--n) - 1) * 0.05s);
+}
+
+.test4 div:nth-child(1) {
+  --n: 1;
+}
+.test4 div:nth-child(2) {
+  --n: 2;
+}
+.test4 div:nth-child(3) {
+  --n: 3;
+}
+.test4 div:nth-child(4) {
+  --n: 4;
+}
+.test4 div:nth-child(5) {
+  --n: 5;
+}
+.test4 div:nth-child(6) {
+  --n: 6;
+}
+.test4 div:nth-child(7) {
+  --n: 7;
+}
+.test4 div:nth-child(8) {
+  --n: 8;
+}
+.test4 div:nth-child(9) {
+  --n: 9;
+}
+.test4 div:nth-child(10) {
+  --n: 10;
+}
